@@ -1,151 +1,131 @@
+(() => {
+  const body = document.body;
+  const loader = document.getElementById('loader');
+  const progress = document.getElementById('progress');
+  const menuButton = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.main-nav');
+  const charSearch = document.getElementById('characterSearch');
+  const charCards = [...document.querySelectorAll('.character-card')];
+  const charEmpty = document.getElementById('characterEmpty');
+  const filterButtons = [...document.querySelectorAll('.filter-chip')];
+  const locationCards = [...document.querySelectorAll('.location-card')];
+  const modal = document.getElementById('detailModal');
+  const modalImage = document.getElementById('modalImage');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalDescription = document.getElementById('modalDescription');
+  const modalTag = document.getElementById('modalTag');
+  const closeButton = document.querySelector('.modal-close');
+  let lastFocused = null;
 
-const scenes = [
-  {
-    image: "mc donald.jpg",
-    label: "🍟 THE SNACK MISSION",
-    title: "A very important food mission.",
-    text: "When delicious snacks are involved, Billo takes the job seriously. Well… mostly."
-  },
-  {
-    image: "Bollo.jpg",
-    label: "😻 THE MAIN CHARACTER",
-    title: "Too cute to stay out of trouble.",
-    text: "One curious look, two tiny paws, and somehow the whole room is Billo's playground."
-  },
-  {
-    image: "billo home.JPG",
-    label: "🏡 HOME SWEET HOME",
-    title: "A little rest before the next adventure.",
-    text: "Even the busiest little adventurers need a cozy place to recharge and dream big."
+  const finishLoading = () => loader?.classList.add('done');
+  if (document.readyState === 'complete') finishLoading();
+  else window.addEventListener('load', finishLoading, { once: true });
+  window.setTimeout(finishLoading, 1900);
+
+  function updateProgress() {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = `${max > 0 ? (window.scrollY / max) * 100 : 0}%`;
   }
-];
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
 
-const image = document.getElementById("adventureImage");
-const label = document.getElementById("sceneLabel");
-const title = document.getElementById("sceneTitle");
-const text = document.getElementById("sceneText");
-const number = document.getElementById("sceneNumber");
-const countdown = document.getElementById("countdown");
-const progress = document.querySelectorAll("#sceneProgress span");
-const feature = document.getElementById("adventureFeature");
-
-let currentScene = 0;
-let secondsLeft = 8;
-let timer;
-let isPaused = false;
-
-function showScene(index) {
-  currentScene = (index + scenes.length) % scenes.length;
-  const scene = scenes[currentScene];
-
-  image.classList.add("changing");
-
-  window.setTimeout(() => {
-    image.src = scene.image;
-    image.alt = scene.title;
-    label.textContent = scene.label;
-    title.textContent = scene.title;
-    text.textContent = scene.text;
-    number.textContent =
-      `STORY ${String(currentScene + 1).padStart(2, "0")} / ${String(scenes.length).padStart(2, "0")}`;
-
-    progress.forEach((dot, i) => {
-      dot.classList.toggle("active", i === currentScene);
-    });
-
-    image.classList.remove("changing");
-  }, 180);
-
-  resetCountdown();
-}
-
-function resetCountdown() {
-  secondsLeft = 8;
-  countdown.textContent = secondsLeft;
-}
-
-function startTimer() {
-  window.clearInterval(timer);
-
-  timer = window.setInterval(() => {
-    if (isPaused || document.hidden) return;
-
-    secondsLeft -= 1;
-    countdown.textContent = secondsLeft;
-
-    if (secondsLeft <= 0) {
-      showScene(currentScene + 1);
-    }
-  }, 1000);
-}
-
-document.getElementById("nextScene").addEventListener("click", () => {
-  showScene(currentScene + 1);
-});
-
-document.getElementById("prevScene").addEventListener("click", () => {
-  showScene(currentScene - 1);
-});
-
-// Pause the automatic slideshow while the visitor interacts with it.
-feature.addEventListener("mouseenter", () => {
-  isPaused = true;
-});
-
-feature.addEventListener("mouseleave", () => {
-  isPaused = false;
-});
-
-feature.addEventListener("focusin", () => {
-  isPaused = true;
-});
-
-feature.addEventListener("focusout", (event) => {
-  if (!feature.contains(event.relatedTarget)) {
-    isPaused = false;
-  }
-});
-
-// Mobile navigation
-const menuToggle = document.getElementById("menuToggle");
-const nav = document.querySelector(".navbar nav");
-
-menuToggle.addEventListener("click", () => {
-  const isOpen = nav.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
-  menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
-  menuToggle.textContent = isOpen ? "✕" : "☰";
-});
-
-nav.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("open");
-    menuToggle.textContent = "☰";
-    menuToggle.setAttribute("aria-expanded", "false");
+  menuButton?.addEventListener('click', () => {
+    const open = !nav.classList.contains('open');
+    nav.classList.toggle('open', open);
+    menuButton.classList.toggle('open', open);
+    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
   });
-});
+  nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    menuButton?.classList.remove('open');
+    menuButton?.setAttribute('aria-expanded', 'false');
+    menuButton?.setAttribute('aria-label', 'Open navigation');
+  }));
 
-// Reveal elements when they enter the screen.
-const revealElements = document.querySelectorAll(".reveal");
+  charSearch?.addEventListener('input', () => {
+    const q = charSearch.value.trim().toLowerCase();
+    let visible = 0;
+    charCards.forEach(card => {
+      const show = (card.dataset.search || '').includes(q);
+      card.hidden = !show;
+      if (show) visible++;
+    });
+    charEmpty.hidden = visible !== 0;
+  });
 
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
+  filterButtons.forEach(button => button.addEventListener('click', () => {
+    const filter = button.dataset.filter;
+    filterButtons.forEach(b => {
+      const active = b === button;
+      b.classList.toggle('active', active);
+      b.setAttribute('aria-pressed', String(active));
+    });
+    locationCards.forEach(card => {
+      card.hidden = filter !== 'all' && card.dataset.category !== filter;
+    });
+  }));
+
+  function openModal(item) {
+    lastFocused = document.activeElement;
+    modalTitle.textContent = item.dataset.title || 'Billo Story';
+    modalDescription.textContent = item.dataset.desc || 'Every great story begins somewhere.';
+    modalTag.textContent = item.dataset.tag || 'BILLO STORY UNIVERSE';
+    modalImage.src = item.dataset.image || 'assets/Billo.jpg';
+    modalImage.alt = item.dataset.title || 'Billo Story';
+    modalImage.onerror = () => {
+      modalImage.onerror = null;
+      modalImage.src = 'assets/Billo.jpg';
+    };
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    body.classList.add('modal-open');
+    closeButton.focus();
+  }
+  function closeModal() {
+    if (!modal.classList.contains('open')) return;
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    body.classList.remove('modal-open');
+    if (lastFocused?.focus) lastFocused.focus();
+  }
+  document.querySelectorAll('[data-open="true"]').forEach(item => {
+    item.addEventListener('click', () => openModal(item));
+    item.addEventListener('keydown', event => {
+      if ((event.key === 'Enter' || event.key === ' ') && item.tagName !== 'BUTTON') {
+        event.preventDefault(); openModal(item);
       }
     });
-  }, { threshold: 0.12 });
+  });
+  closeButton?.addEventListener('click', closeModal);
+  document.querySelector('.modal-backdrop')?.addEventListener('click', closeModal);
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      closeModal();
+      nav?.classList.remove('open');
+      menuButton?.classList.remove('open');
+      menuButton?.setAttribute('aria-expanded', 'false');
+    }
+    if (event.key === 'Tab' && modal.classList.contains('open')) {
+      event.preventDefault(); closeButton.focus();
+    }
+  });
 
-  revealElements.forEach((element) => observer.observe(element));
-} else {
-  revealElements.forEach((element) => element.classList.add("visible"));
-}
+  const revealNodes = [...document.querySelectorAll('.reveal')];
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    }), { threshold: 0.08, rootMargin: '0px 0px -25px 0px' });
+    revealNodes.forEach(node => observer.observe(node));
+  } else revealNodes.forEach(node => node.classList.add('visible'));
 
-// Footer year
-document.getElementById("year").textContent = new Date().getFullYear();
-
-// Start the 8-second story animation.
-showScene(0);
-startTimer();
+  document.querySelectorAll('img').forEach(image => image.addEventListener('error', () => {
+    image.classList.add('image-unavailable');
+    if (image.id !== 'modalImage' && image.getAttribute('src') !== 'assets/Billo.jpg') {
+      image.alt = image.alt || 'Image not available';
+    }
+  }, { once: true }));
+})();

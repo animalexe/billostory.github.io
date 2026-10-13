@@ -1,144 +1,106 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#fff8ed">
-  <title>Billo Story V9 | Little Cat, Big Adventures</title>
-  <meta name="description" content="Meet Billo — a little cat with big adventures, funny moments, and a whole lot of heart.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Billo Story — Cinematic Animated Universe</title>
+<meta name="description" content="Meet Billo, Bubu, Micky, Leo, Bruno and Mono in the cinematic Pakistani animated comedy universe of Billo Story.">
+<meta name="theme-color" content="#10100f">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="topbar">
-    <span>🐾 A LITTLE CAT. A BIG WORLD.</span>
-    <span class="live-dot">● NEW ADVENTURES</span>
-  </div>
-
-  <header class="navbar">
-    <a class="logo" href="#home"><span class="logo-icon">🐱</span> billo<span>story</span></a>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#story">Our Story</a>
-      <a href="#adventures">Adventures</a>
-    </nav>
-    <a class="nav-cta" href="#adventures">Let's Explore <span>↗</span></a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-bg-shape shape-one"></div>
-      <div class="hero-bg-shape shape-two"></div>
-
-      <div class="hero-copy reveal">
-        <div class="eyebrow"><span>✨</span> WELCOME TO BILLО'S WORLD</div>
-        <h1>Small paws.<br> <span>Big adventures.</span></h1>
-        <p>Meet Billo — the curious little cat turning ordinary days into extraordinary stories.</p>
-        <div class="hero-buttons">
-          <a class="btn btn-primary" href="#story">Meet Billo <span>→</span></a>
-          <a class="btn btn-secondary" href="#adventures"><span class="play">▶</span> Explore stories</a>
-        </div>
-        <div class="hero-proof">
-          <div class="paw-stack"><span>🐾</span><span>🐱</span><span>💛</span></div>
-          <div><strong>100% adorable</strong><small>0% boring moments</small></div>
-        </div>
-      </div>
-
-      <div class="hero-art reveal">
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-        <span class="floating-star star-a">✦</span>
-        <span class="floating-star star-b">✧</span>
-        <span class="floating-heart">♥</span>
-        <div class="hero-image-wrap">
-          <img src="billo home.JPG" alt="Billo the cat" class="hero-image"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
-          <div class="image-fallback">🐱<span>Meet Billo!</span></div>
-        </div>
-        <div class="floating-card card-top"><span>😺</span><div><strong>Curious cat</strong><small>Always exploring</small></div></div>
-        <div class="floating-card card-bottom"><span>💛</span><div><strong>Little legend</strong><small>Big main-character energy</small></div></div>
-        <div class="image-caption">BILLO'S HAPPY PLACE <span>✦</span></div>
-      </div>
-
-      <div class="hero-bottom-note"><span>↓</span> SCROLL FOR THE FUN</div>
-    </section>
-
-    <div class="ticker" aria-label="Billo's favorite things">
-      <div class="ticker-track">
-        <span>🐾 BIG DREAMS</span><i>✦</i><span>😸 SILLY MOMENTS</span><i>✦</i>
-        <span>🍟 SNACK MISSIONS</span><i>✦</i><span>💛 WHOLESOME STORIES</span><i>✦</i>
-        <span>🐾 BIG DREAMS</span><i>✦</i><span>😸 SILLY MOMENTS</span><i>✦</i>
-        <span>🍟 SNACK MISSIONS</span><i>✦</i><span>💛 WHOLESOME STORIES</span><i>✦</i>
-      </div>
-    </div>
-
-    <section class="story section" id="story">
-      <div class="section-heading reveal">
-        <span class="eyebrow">💛 THE STORY BEGINS</span>
-        <h2>Not just a cat.<br><span>A whole personality.</span></h2>
-        <p>A little bit mischievous, a lot lovable, and always ready for the next adventure.</p>
-      </div>
-      <div class="story-grid">
-        <article class="story-card story-photo reveal">
-          <img src="Bollo.jpg" alt="Billo's character" loading="lazy"
-               onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
-          <div class="photo-fallback">😻</div>
-          <span class="photo-tag">THE MAIN CHARACTER</span>
-        </article>
-        <div class="story-details reveal">
-          <div class="detail-row"><span class="detail-icon">🎨</span><div><h3>Full of personality</h3><p>Every expression tells a story. Every little moment becomes a memory.</p></div></div>
-          <div class="detail-row"><span class="detail-icon">🧭</span><div><h3>Born to explore</h3><p>From cozy corners to unexpected places, Billo finds fun everywhere.</p></div></div>
-          <div class="detail-row"><span class="detail-icon">💖</span><div><h3>Made to make you smile</h3><p>Because the best stories have a little chaos and lots of heart.</p></div></div>
-          <a class="text-link" href="#adventures">Discover the adventures <span>↗</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="adventures section" id="adventures">
-      <div class="section-heading reveal">
-        <span class="eyebrow">🚀 THE ADVENTURE CLUB</span>
-        <h2>What's Billo up to <span>now?</span></h2>
-        <p>Every few seconds, a new little adventure begins.</p>
-      </div>
-
-      <div class="adventure-feature reveal" id="adventureFeature">
-        <div class="adventure-image">
-          <img id="adventureImage" src="mc donald.jpg" alt="Billo's latest adventure" loading="lazy">
-          <div class="scene-number" id="sceneNumber">STORY 01 / 03</div>
-        </div>
-        <div class="adventure-copy">
-          <span class="scene-label" id="sceneLabel">🍟 THE SNACK MISSION</span>
-          <h3 id="sceneTitle">A very important food mission.</h3>
-          <p id="sceneText">When delicious snacks are involved, Billo takes the job seriously. Well… mostly.</p>
-          <div class="scene-controls">
-            <button id="prevScene" class="round-btn" aria-label="Previous story">←</button>
-            <div class="scene-progress" id="sceneProgress"><span class="active"></span><span></span><span></span></div>
-            <button id="nextScene" class="round-btn" aria-label="Next story">→</button>
-          </div>
-          <p class="auto-note"><span class="pulse-dot"></span> NEXT ADVENTURE IN <strong id="countdown">8</strong> SECONDS</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="final-cta">
-      <div class="cta-sparkle">✦</div>
-      <span class="eyebrow">EVERY PAW HAS A STORY</span>
-      <h2>Stay curious.<br><span>Stay a little silly.</span></h2>
-      <p>The Billo universe is just getting started.</p>
-      <a class="btn btn-dark" href="#home">Back to the top ↑</a>
-      <span class="cta-cat">🐈</span>
-    </section>
-  </main>
-
-  <footer>
-    <a class="logo" href="#home">🐱 billo<span>story</span></a>
-    <p>Made with a little mischief & a lot of love.</p>
-    <span>© <span id="year"></span> Billo Story · V9</span>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<div class="scroll-progress" aria-hidden="true"><span id="progress"></span></div>
+<div class="loader" id="loader" aria-hidden="true"><div class="loader-brand">BILLO<span>STORY</span></div><div class="loader-line"><i></i></div><small>CINEMATIC UNIVERSE</small></div>
+<header class="site-header" id="top">
+ <a class="brand" href="#home" aria-label="Billo Story home"><span class="brand-mark">B</span><span>BILLO<em>STORY</em></span></a>
+ <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Open navigation"><span></span><span></span></button>
+ <nav class="main-nav" aria-label="Main navigation"><a href="#characters">Characters</a><a href="#world">World</a><a href="#stories">Episodes</a><a href="#about">About</a></nav>
+ <a class="header-cta" href="#characters">MEET THE CREW <span>↘</span></a>
+</header>
+<main>
+<section class="hero" id="home">
+ <div class="hero-backdrop" aria-hidden="true"></div><div class="hero-grain" aria-hidden="true"></div>
+ <div class="hero-layout">
+  <div class="hero-copy reveal"><span class="eyebrow hero-eyebrow"><i></i> PAKISTANI ANIMATED COMEDY UNIVERSE</span><p class="hero-kicker">SIX CHARACTERS. ENDLESS CHAOS.</p><h1>Billo<br><span>Story.</span></h1><p class="hero-description">Ek Billo. Ek crazy gang.<br>Har roz ek naya scene.</p><div class="hero-actions"><a class="button-primary" href="#characters">MEET THE CREW <span>↘</span></a><a class="button-text" href="#world">EXPLORE THE WORLD <span>→</span></a></div></div>
+  <div class="hero-stamp reveal"><span class="stamp-star">✳</span><span>MADE FOR</span><strong>BIG<br>LAUGHS</strong><small>AND BIGGER ADVENTURES</small></div>
+ </div>
+ <div class="hero-bottom"><span>AN ORIGINAL ANIMATED WORLD</span><a href="#about">SCROLL TO EXPLORE <span>↓</span></a><span>EST. 2026</span></div>
+</section>
+<section class="intro-section section-shell" id="about"><div class="section-index">01 <span>—</span> THE UNIVERSE</div><div class="intro-content"><h2>Comedy with a<br><em>cinematic soul.</em></h2><div class="intro-copy"><p>Billo Story is a playful animated universe packed with expressive characters, desi situations, larger-than-life locations and unexpected twists.</p><div class="stat-row"><div><strong>06</strong><span>MAIN CHARACTERS</span></div><div><strong>18</strong><span>SCENE LOCATIONS</span></div><div><strong>∞</strong><span>WAYS TO GET IN TROUBLE</span></div></div></div></div></section>
+<section class="characters-section section-shell" id="characters"><div class="section-heading"><div><div class="section-index">02 <span>—</span> THE CREW</div><h2>Meet the <em>characters.</em></h2></div><p>Har kisi ka apna style.<br>Har kisi ki apni story.</p></div>
+ <div class="character-tools"><label class="search-box"><span aria-hidden="true">⌕</span><input id="characterSearch" type="search" placeholder="Search a character…" aria-label="Search characters"><kbd>6 CHARACTERS</kbd></label><span class="tool-hint">PICK A CHARACTER TO KNOW MORE ↗</span></div>
+ <div class="character-grid" id="characterGrid"><button class="character-card reveal" type="button" data-open="true" data-kind="character" data-title="Billo" data-desc="Cute, clever, and always one wild idea away from trouble." data-image="assets/Billo.jpg" data-tag="THE MAIN HERO" data-search="billo cat main hero" aria-label="View Billo, cat">
+      <div class="character-art"><img src="assets/Billo.jpg" alt="Billo the cat" loading="lazy"><span class="char-icon" aria-hidden="true">🐱</span><span class="view-icon" aria-hidden="true">↗</span><span class="art-fade"></span></div>
+      <div class="character-info"><span class="eyebrow">CAT · MAIN HERO</span><h3>Billo</h3><p>Cute, clever, and always one wild idea away from trouble.</p><span class="text-link">MEET BILLO <b>↗</b></span></div>
+    </button><button class="character-card reveal" type="button" data-open="true" data-kind="character" data-title="Bubu" data-desc="Billo’s loyal dog friend—funny, energetic, and never far from the chaos." data-image="https://i.postimg.cc/D80VMtqn/Gemini-Generated-Image-5kqd7p5kqd7p5kqd.jpg" data-tag="THE BEST FRIEND" data-search="bubu dog best friend" aria-label="View Bubu, dog">
+      <div class="character-art"><img src="https://i.postimg.cc/D80VMtqn/Gemini-Generated-Image-5kqd7p5kqd7p5kqd.jpg" alt="Bubu the dog" loading="lazy"><span class="char-icon" aria-hidden="true">🐶</span><span class="view-icon" aria-hidden="true">↗</span><span class="art-fade"></span></div>
+      <div class="character-info"><span class="eyebrow">DOG · BEST FRIEND</span><h3>Bubu</h3><p>Billo’s loyal dog friend—funny, energetic, and never far from the chaos.</p><span class="text-link">MEET BUBU <b>↗</b></span></div>
+    </button><button class="character-card reveal" type="button" data-open="true" data-kind="character" data-title="Micky" data-desc="A quick-thinking little mouse who turns every challenge into a competition." data-image="https://i.postimg.cc/ZBHgfcnV/Gemini-Generated-Image-xmqq2mxmqq2mxmqq.jpg" data-tag="THE QUICK THINKER" data-search="micky mouse the clever one" aria-label="View Micky, mouse">
+      <div class="character-art"><img src="https://i.postimg.cc/ZBHgfcnV/Gemini-Generated-Image-xmqq2mxmqq2mxmqq.jpg" alt="Micky the mouse" loading="lazy"><span class="char-icon" aria-hidden="true">🐭</span><span class="view-icon" aria-hidden="true">↗</span><span class="art-fade"></span></div>
+      <div class="character-info"><span class="eyebrow">MOUSE · THE CLEVER ONE</span><h3>Micky</h3><p>A quick-thinking little mouse who turns every challenge into a competition.</p><span class="text-link">MEET MICKY <b>↗</b></span></div>
+    </button><button class="character-card reveal" type="button" data-open="true" data-kind="character" data-title="Leo" data-desc="A confident lion with a big mane, bigger presence, and a surprisingly soft side." data-image="https://i.postimg.cc/B8WdtbRS/Gemini-Generated-Image-etimmfetimmfetim.jpg" data-tag="THE LION" data-search="leo lion the bold one" aria-label="View Leo, lion">
+      <div class="character-art"><img src="https://i.postimg.cc/B8WdtbRS/Gemini-Generated-Image-etimmfetimmfetim.jpg" alt="Leo the lion" loading="lazy"><span class="char-icon" aria-hidden="true">🦁</span><span class="view-icon" aria-hidden="true">↗</span><span class="art-fade"></span></div>
+      <div class="character-info"><span class="eyebrow">LION · THE BOLD ONE</span><h3>Leo</h3><p>A confident lion with a big mane, bigger presence, and a surprisingly soft side.</p><span class="text-link">MEET LEO <b>↗</b></span></div>
+    </button><button class="character-card reveal" type="button" data-open="true" data-kind="character" data-title="Bruno" data-desc="A big, lovable bear with a kind heart and excellent comic timing." data-image="https://i.postimg.cc/YLSPTWLf/Gemini-Generated-Image-y1me9ny1me9ny1me.jpg" data-tag="THE GENTLE GIANT" data-search="bruno bear the gentle giant" aria-label="View Bruno, bear">
+      <div class="character-art"><img src="https://i.postimg.cc/YLSPTWLf/Gemini-Generated-Image-y1me9ny1me9ny1me.jpg" alt="Bruno the bear" loading="lazy"><span class="char-icon" aria-hidden="true">🐻</span><span class="view-icon" aria-hidden="true">↗</span><span class="art-fade"></span></div>
+      <div class="character-info"><span class="eyebrow">BEAR · THE GENTLE GIANT</span><h3>Bruno</h3><p>A big, lovable bear with a kind heart and excellent comic timing.</p><span class="text-link">MEET BRUNO <b>↗</b></span></div>
+    </button><button class="character-card reveal" type="button" data-open="true" data-kind="character" data-title="Mono" data-desc="A playful monkey who loves pranks, surprises, and challenging Micky." data-image="https://i.postimg.cc/JDxgTq0j/Gemini-Generated-Image-v6cm9av6cm9av6cm.jpg" data-tag="THE PRANKSTER" data-search="mono monkey the troublemaker" aria-label="View Mono, monkey">
+      <div class="character-art"><img src="https://i.postimg.cc/JDxgTq0j/Gemini-Generated-Image-v6cm9av6cm9av6cm.jpg" alt="Mono the monkey" loading="lazy"><span class="char-icon" aria-hidden="true">🐒</span><span class="view-icon" aria-hidden="true">↗</span><span class="art-fade"></span></div>
+      <div class="character-info"><span class="eyebrow">MONKEY · THE TROUBLEMAKER</span><h3>Mono</h3><p>A playful monkey who loves pranks, surprises, and challenging Micky.</p><span class="text-link">MEET MONO <b>↗</b></span></div>
+    </button></div><p class="empty-state" id="characterEmpty" hidden>No character found. Try another name.</p>
+ <div class="friendship-strip"><div class="friendship-symbol">♥</div><div><small>BEST FRIENDS</small><strong>Billo <span>×</span> Bubu</strong><p>Ek plan banata hai, doosra usko aur kharab karta hai.</p></div><div class="friendship-divider"></div><div class="friendship-symbol lightning">ϟ</div><div><small>FOREVER RIVALS</small><strong>Micky <span>×</span> Mono</strong><p>Competition chhoti ho ya bari — dono ready hain.</p></div></div>
+</section>
+<section class="world-section" id="world"><div class="world-head section-shell"><div><div class="section-index">03 <span>—</span> THE WORLD</div><h2>Every place has<br><em>a story.</em></h2></div><div class="world-head-side"><p>From cozy corners to grand entrances, every location is a new stage for chaos.</p><div class="world-counter"><strong>18</strong><span>PLACES<br>TO EXPLORE</span></div></div></div>
+ <div class="location-toolbar" role="group" aria-label="Filter locations"><button class="filter-chip active" data-filter="all" type="button" aria-pressed="true">ALL PLACES <span>18</span></button><button class="filter-chip" data-filter="interiors" type="button" aria-pressed="false">INTERIORS</button><button class="filter-chip" data-filter="outdoors" type="button" aria-pressed="false">OUTDOORS</button><button class="filter-chip" data-filter="food" type="button" aria-pressed="false">FOOD & FUN</button></div>
+ <div class="location-grid" id="locationGrid"><button class="location-card reveal" type="button" data-open="true" data-kind="location" data-title="Billo&#x27;s Home" data-desc="The home base where every crazy plan begins." data-image="https://i.postimg.cc/CdmTJFn4/billo-home.jpg" data-tag="INTERIOR" data-category="interiors" style="--photo:url('https://i.postimg.cc/CdmTJFn4/billo-home.jpg')" aria-label="Explore Billo&#x27;s Home">
+      <span class="location-number">01</span><span class="location-shade"></span><span class="location-copy"><small>INTERIOR</small><strong>Billo&#x27;s Home</strong><span class="loc-desc">The home base where every crazy plan begins.</span><em>VIEW SCENE ↗</em></span>
+    </button><button class="location-card reveal" type="button" data-open="true" data-kind="location" data-title="The Garden" data-desc="Fresh air, secret plans and outdoor comedy." data-image="https://i.postimg.cc/1fXxjLpg/Gemini-Generated-Image-8bgp5h8bgp5h8bgp.jpg" data-tag="OUTDOORS" data-category="outdoors" style="--photo:url('https://i.postimg.cc/1fXxjLpg/Gemini-Generated-Image-8bgp5h8bgp5h8bgp.jpg')" aria-label="Explore The Garden">
+      <span class="location-number">02</span><span class="location-shade"></span><span class="location-copy"><small>OUTDOORS</small><strong>The Garden</strong><span class="loc-desc">Fresh air, secret plans and outdoor comedy.</span><em>VIEW SCENE ↗</em></span>
+    </button><button class="location-card reveal" type="button" data-open="true" data-kind="location" data-title="The Lounge" data-desc="A cozy hangout for late-night gossip and chaos." data-image="https://i.postimg.cc/w7MKGShs/Gemini-Generated-Image-8wtd088wtd088wtd.jpg" data-tag="INTERIOR" data-category="interiors" style="--photo:url('https://i.postimg.cc/w7MKGShs/Gemini-Generated-Image-8wtd088wtd088wtd.jpg')" aria-label="Explore The Lounge">
+      <span class="location-number">03</span><span class="location-shade"></span><span class="location-copy"><small>INTERIOR</small><strong>The Lounge</strong><span class="loc-desc">A cozy hangout for late-night gossip and chaos.</span><em>VIEW SCENE ↗</em></span>
+    </button><button class="location-card reveal" type="button" data-open="true" data-kind="location" data-title="The Kitchen" data-desc="Where snacks disappear faster than explanations." data-image="https://i.postimg.cc/qN6Pkyb5/Gemini-Generated-Image-8xax3o8xax3o8xax.jpg" data-tag="FOOD &amp; FUN" data-category="food" style="--photo:url('https://i.postimg.cc/qN6Pkyb5/Gemini-Generated-Image-8xax3o8xax3o8xax.jpg')" aria-label="Explore The Kitchen">
+      <span class="location-number">04</span><span class="location-shade"></span><span class="location-copy"><small>FOOD &amp; FUN</small><strong>The Kitchen</strong><span class="loc-desc">Where snacks disappear faster than explanations.</span><em>VIEW SCENE ↗</em></span>
+    </button><button class="location-card reveal" type="button" data-open="true" data-kind="location" data-title="The Grand Hall" data-desc="Big entrances, dramatic moments and bigger reactions." data-image="https://i.postimg.cc/K136ZBph/Gemini-Generated-Image-a3sy00a3sy00a3sy.jpg" data-tag="INTERIOR" data-category="interiors" style="--photo:url('https://i.postimg.cc/K136ZBph/Gemini-Generated-Image-a3sy00a3sy00a3sy.jpg')" aria-label="Explore The Grand Hall">
+      <span class="location-number">05</span><span class="location-shade"></span><span class="location-copy"><small>INTERIOR</small><strong>The Grand Hall</strong><span class="loc-desc">Big entrances, dramatic moments and bigger reactions.</span><em>VIEW SCENE ↗</em></span>
+    </button><button class="location-card reveal" type="button" data-open="true" data-kind="location" data-title="The Luxury Hall" data-desc="A cinematic space for premium-level mischief." data-image="https://i.postimg.cc/mP1vbCXq/Gemini-Generated-Image-djfzvrdjfzvrdjfz.jpg" data-tag="INTERIOR" data-category="interiors" style="--photo:url('https://i.postimg.cc/mP1vbCXq/Gemini-Generated-Image-djfzvrdjfzvrdjfz.jpg')" aria-label="Explore The Luxury Hall">
+      <span class="location-number">06</span><span class="location-shade"></span><span class="location-copy"><small>INTERIOR</small><strong>The Luxury Hall</strong><span class="loc-desc">A cinematic space for premium-level mischief.</span><em>VIEW SCENE ↗</em></span>
+    </button><button class="location-card reveal" type="button" data-open="true" data-kind="location" data-title="The Beach" data-desc="Sunny adventures with maximum desi energy." data-image="https://i.postimg.cc/ZWvGTpsk/Gemini-Generated-Image-dvud8cdvud8cdvud.jpg" data-tag="OUTDOORS" data-category="outdoors" style="--photo:url('https://i.postimg.cc/ZWvGTpsk/Gemini-Generated-Image-dvud8cdvud8cdvud.jpg')" aria-label="Explore The Beach">
+      <span class="location-number">07</span><span class="location-shade"></span><span class="location-copy"><small>OUTDOORS</small><strong>The Beach</strong><span class="loc-desc">Sunny adventures with maximum desi energy.</span><em>VIEW SCENE ↗</em></span>
+    </button><button class="location-card reveal" type="button" data-open="true" data-kind="location" data-title="The Restaurant" data-desc="Food, friends and the perfect setup for trouble." data-image="https://i.postimg.cc/bGXKdr4p/Gemini-Generated-Image-e0n8hfe0n8hfe0n8.jpg" data-tag="FOOD &amp; FUN" data-category="food" style="--photo:url('https://i.postimg.cc/bGXKdr4p/Gemini-Generated-Image-e0n8hfe0n8hfe0n8.jpg')" aria-label="Explore The Restaurant">
+      <span class="location-number">08</span><span class="location-shade"></span><span class="location-copy"><small>FOOD &amp; FUN</small><strong>The Restaurant</strong><span class="loc-desc">Food, friends and the perfect setup for trouble.</span><em>VIEW SCENE ↗</em></span>
+    </button><button class="location-card reveal" type="button" data-open="true" data-kind="location" data-title="The Atrium" data-desc="A bright meeting place for the whole crew." data-image="https://i.postimg.cc/CZj98YVC/Gemini-Generated-Image-ih0th3ih0th3ih0t.jpg" data-tag="INTERIOR" data-category="interiors" style="--photo:url('https://i.postimg.cc/CZj98YVC/Gemini-Generated-Image-ih0th3ih0th3ih0t.jpg')" aria-label="Explore The Atrium">
+      <span class="location-number">09</span><span class="location-shade"></span><span class="location-copy"><small>INTERIOR</small><strong>The Atrium</strong><span class="loc-desc">A bright meeting place for the whole crew.</span><em>VIEW SCENE ↗</em></span>
+    </button><button class="location-card reveal" type="button" data-open="true" data-kind="location" data-title="The Corridor" data-desc="Every hallway can become a comedy scene." data-image="https://i.postimg.cc/cKqV6CPR/Gemini-Generated-Image-l7nqjtl7nqjtl7nq.jpg" data-tag="INTERIOR" data-category="interiors" style="--photo:url('https://i.postimg.cc/cKqV6CPR/Gemini-Generated-Image-l7nqjtl7nqjtl7nq.jpg')" aria-label="Explore The Corridor">
+      <span class="location-number">10</span><span class="location-shade"></span><span class="location-copy"><small>INTERIOR</small><strong>The Corridor</strong><span class="loc-desc">Every hallway can become a comedy scene.</span><em>VIEW SCENE ↗</em></span>
+    </button><button class="location-card reveal" type="button" data-open="true" data-kind="location" data-title="The Dining Room" data-desc="The table is ready; the arguments are too." data-image="https://i.postimg.cc/XG4mchVs/Gemini-Generated-Image-na6ns9na6ns9na6n.jpg" data-tag="FOOD &amp; FUN" data-category="food" style="--photo:url('https://i.postimg.cc/XG4mchVs/Gemini-Generated-Image-na6ns9na6ns9na6n.jpg')" aria-label="Explore The Dining Room">
+      <span class="location-number">11</span><span class="location-shade"></span><span class="location-copy"><small>FOOD &amp; FUN</small><strong>The Dining Room</strong><span class="loc-desc">The table is ready; the arguments are too.</span><em>VIEW SCENE ↗</em></span>
+    </button><button class="location-card reveal" type="button" data-open="true" data-kind="location" data-title="The Hotel Lobby" data-desc="Grand arrivals and suspicious-looking plans." data-image="https://i.postimg.cc/McygBxS2/Gemini-Generated-Image-nif9eknif9eknif9.jpg" data-tag="INTERIOR" data-category="interiors" style="--photo:url('https://i.postimg.cc/McygBxS2/Gemini-Generated-Image-nif9eknif9eknif9.jpg')" aria-label="Explore The Hotel Lobby">
+      <span class="location-number">12</span><span class="location-shade"></span><span class="location-copy"><small>INTERIOR</small><strong>The Hotel Lobby</strong><span class="loc-desc">Grand arrivals and suspicious-looking plans.</span><em>VIEW SCENE ↗</em></span>
+    </button><button class="location-card reveal" type="button" data-open="true" data-kind="location" data-title="The Living Room" data-desc="A relaxed spot that never stays relaxed for long." data-image="https://i.postimg.cc/tZpwtfXK/Gemini-Generated-Image-p519ykp519ykp519.jpg" data-tag="INTERIOR" data-category="interiors" style="--photo:url('https://i.postimg.cc/tZpwtfXK/Gemini-Generated-Image-p519ykp519ykp519.jpg')" aria-label="Explore The Living Room">
+      <span class="location-number">13</span><span class="location-shade"></span><span class="location-copy"><small>INTERIOR</small><strong>The Living Room</strong><span class="loc-desc">A relaxed spot that never stays relaxed for long.</span><em>VIEW SCENE ↗</em></span>
+    </button><button class="location-card reveal" type="button" data-open="true" data-kind="location" data-title="The Open Hall" data-desc="Space for group scenes, games and chaos." data-image="https://i.postimg.cc/phR4Y7WH/Gemini-Generated-Image-qel7dtqel7dtqel7.jpg" data-tag="INTERIOR" data-category="interiors" style="--photo:url('https://i.postimg.cc/phR4Y7WH/Gemini-Generated-Image-qel7dtqel7dtqel7.jpg')" aria-label="Explore The Open Hall">
+      <span class="location-number">14</span><span class="location-shade"></span><span class="location-copy"><small>INTERIOR</small><strong>The Open Hall</strong><span class="loc-desc">Space for group scenes, games and chaos.</span><em>VIEW SCENE ↗</em></span>
+    </button><button class="location-card reveal" type="button" data-open="true" data-kind="location" data-title="The Modern Interior" data-desc="Clean, stylish and perfect for cinematic stories." data-image="https://i.postimg.cc/wygZcPqx/Gemini-Generated-Image-qf7xveqf7xveqf7x.jpg" data-tag="INTERIOR" data-category="interiors" style="--photo:url('https://i.postimg.cc/wygZcPqx/Gemini-Generated-Image-qf7xveqf7xveqf7x.jpg')" aria-label="Explore The Modern Interior">
+      <span class="location-number">15</span><span class="location-shade"></span><span class="location-copy"><small>INTERIOR</small><strong>The Modern Interior</strong><span class="loc-desc">Clean, stylish and perfect for cinematic stories.</span><em>VIEW SCENE ↗</em></span>
+    </button><button class="location-card reveal" type="button" data-open="true" data-kind="location" data-title="The Premium Room" data-desc="A polished setting for special episodes." data-image="https://i.postimg.cc/1nBTWHX6/Gemini-Generated-Image-t7vs78t7vs78t7vs.jpg" data-tag="INTERIOR" data-category="interiors" style="--photo:url('https://i.postimg.cc/1nBTWHX6/Gemini-Generated-Image-t7vs78t7vs78t7vs.jpg')" aria-label="Explore The Premium Room">
+      <span class="location-number">16</span><span class="location-shade"></span><span class="location-copy"><small>INTERIOR</small><strong>The Premium Room</strong><span class="loc-desc">A polished setting for special episodes.</span><em>VIEW SCENE ↗</em></span>
+    </button><button class="location-card reveal" type="button" data-open="true" data-kind="location" data-title="The Grand Interior" data-desc="Big visuals for big Billo moments." data-image="https://i.postimg.cc/TL0Sk91K/Gemini-Generated-Image-tlyusztlyusztlyu.jpg" data-tag="INTERIOR" data-category="interiors" style="--photo:url('https://i.postimg.cc/TL0Sk91K/Gemini-Generated-Image-tlyusztlyusztlyu.jpg')" aria-label="Explore The Grand Interior">
+      <span class="location-number">17</span><span class="location-shade"></span><span class="location-copy"><small>INTERIOR</small><strong>The Grand Interior</strong><span class="loc-desc">Big visuals for big Billo moments.</span><em>VIEW SCENE ↗</em></span>
+    </button><button class="location-card reveal" type="button" data-open="true" data-kind="location" data-title="McDonald&#x27;s" data-desc="The crew&#x27;s iconic fast-food stop — where plans meet fries." data-image="https://i.postimg.cc/MfGLgQfD/mc-donald.jpg" data-tag="FOOD &amp; FUN" data-category="food" style="--photo:url('https://i.postimg.cc/MfGLgQfD/mc-donald.jpg')" aria-label="Explore McDonald&#x27;s">
+      <span class="location-number">18</span><span class="location-shade"></span><span class="location-copy"><small>FOOD &amp; FUN</small><strong>McDonald&#x27;s</strong><span class="loc-desc">The crew&#x27;s iconic fast-food stop — where plans meet fries.</span><em>VIEW SCENE ↗</em></span>
+    </button></div><p class="location-footnote">A NEW LOCATION CAN TURN AN ORDINARY DAY INTO A FULL EPISODE.</p>
+</section>
+<section class="episodes-section section-shell" id="stories"><div class="section-heading"><div><div class="section-index">04 <span>—</span> STORY MODE</div><h2>Scenes waiting<br><em>to happen.</em></h2></div><p>Choti si baat.<br>Bohat bara hungama.</p></div><div class="episode-grid"><button class="episode-card reveal" type="button" data-open="true" data-kind="episode" data-title="Billo vs The Last Samosa" data-desc="Billo sees one samosa left. Micky sees it too. Friendship ends at the snack table." data-image="https://i.postimg.cc/XpqMzTwn/Bollo.jpg" data-tag="EPISODE 01">
+      <span class="episode-top"><b>01</b><span>SHORT STORY</span><i>↗</i></span><div class="episode-image"><img src="https://i.postimg.cc/XpqMzTwn/Bollo.jpg" alt="" loading="lazy"></div><div class="episode-copy"><h3>The Last Samosa</h3><p>Billo sees one samosa left. Micky sees it too. Friendship ends at the snack table.</p><span class="text-link">OPEN EPISODE <b>↗</b></span></div>
+    </button><button class="episode-card reveal" type="button" data-open="true" data-kind="episode" data-title="Garden Ka Secret Plan" data-desc="Billo and Bubu create a plan so secret that even they forget what the plan was." data-image="https://i.postimg.cc/1fXxjLpg/Gemini-Generated-Image-8bgp5h8bgp5h8bgp.jpg" data-tag="EPISODE 02">
+      <span class="episode-top"><b>02</b><span>SHORT STORY</span><i>↗</i></span><div class="episode-image"><img src="https://i.postimg.cc/1fXxjLpg/Gemini-Generated-Image-8bgp5h8bgp5h8bgp.jpg" alt="" loading="lazy"></div><div class="episode-copy"><h3>Garden Ka Secret Plan</h3><p>Billo and Bubu create a plan so secret that even they forget what the plan was.</p><span class="text-link">OPEN EPISODE <b>↗</b></span></div>
+    </button><button class="episode-card reveal" type="button" data-open="true" data-kind="episode" data-title="Micky vs Mono" data-desc="A tiny challenge becomes a full-scale rivalry." data-image="https://i.postimg.cc/ZBHgfcnV/Gemini-Generated-Image-xmqq2mxmqq2mxmqq.jpg" data-tag="EPISODE 03">
+      <span class="episode-top"><b>03</b><span>SHORT STORY</span><i>↗</i></span><div class="episode-image"><img src="https://i.postimg.cc/ZBHgfcnV/Gemini-Generated-Image-xmqq2mxmqq2mxmqq.jpg" alt="" loading="lazy"></div><div class="episode-copy"><h3>Micky vs Mono</h3><p>A tiny challenge becomes a full-scale rivalry.</p><span class="text-link">OPEN EPISODE <b>↗</b></span></div>
+    </button></div></section>
+<section class="join-section" id="join"><div class="join-orbit orbit-one"></div><div class="join-orbit orbit-two"></div><div class="join-content"><span class="eyebrow">05 — JOIN THE WORLD</span><h2>Follow<br>the <em>chaos.</em></h2><p>Naye scenes, naye adventures, aur Billo gang ki full-on masti ke saath connected raho.</p><div class="social-links"><a href="https://www.youtube.com/@BillaStory11/" target="_blank" rel="noopener noreferrer">YOUTUBE <span>↗</span></a><a href="https://www.instagram.com/billastory11/" target="_blank" rel="noopener noreferrer">INSTAGRAM <span>↗</span></a><a href="https://www.facebook.com/profile.php?id=61594445101960" target="_blank" rel="noopener noreferrer">FACEBOOK <span>↗</span></a><a href="https://www.tiktok.com/@billastory11/" target="_blank" rel="noopener noreferrer">TIKTOK <span>↗</span></a></div></div><div class="join-side-mark" aria-hidden="true">B<span>!</span></div></section>
+</main>
+<footer class="site-footer"><a class="brand" href="#top"><span class="brand-mark">B</span><span>BILLO<em>STORY</em></span></a><p>AN ORIGINAL ANIMATED UNIVERSE</p><span>© 2026 BILLO STORY</span><a class="back-top" href="#top">BACK TO TOP ↑</a></footer>
+<div class="detail-modal" id="detailModal" aria-hidden="true"><button class="modal-backdrop" type="button" tabindex="-1" aria-label="Close details"></button><section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDescription"><button class="modal-close" type="button" aria-label="Close details">×</button><div class="modal-visual"><img id="modalImage" src="assets/Billo.jpg" alt=""><span class="modal-visual-label">BILLO STORY UNIVERSE</span></div><div class="modal-content"><span class="eyebrow" id="modalTag">THE UNIVERSE</span><h2 id="modalTitle">Billo</h2><p id="modalDescription">Every great story begins somewhere.</p><span class="modal-bottom-mark">BS<span> / </span>V9</span></div></section></div>
+<script src="script.js"></script>
+</body></html>
